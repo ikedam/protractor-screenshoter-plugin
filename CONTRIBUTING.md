@@ -2,6 +2,9 @@
 - Your PR is more than welcome!
 - Please include always tests in your PR.
 - If you find a bug, please create a test case for it that fails first, then write your fix. If all passes on Travis, feel free to provide your PR.
+- Before publishing a PR, please format the source code and squash all your changes into one single commit.
+- Provide only one feature in one PR, do not combine more features.
+- Please update [README.md](README.md) if your change requires documentation.
 
 ## Bug fixing
 - Please provide us steps to reproduce. Here is a quick checklist how to do it:
@@ -116,14 +119,3 @@ To deploy a new version run commands. If all tests are passed it will be publish
 npm run release
 git push --follow-tags origin master
 ```
-
-# TODO
-- Use promises instead of callbacks
-   - Refactor `asap/spec/end` report writing at the end of each promise.all, instead of after each callback
-- Get rid of workaround for long-running operations
-   - Make a command line tool to collect particular json reports and to combine them into to the final `report.js` to avoid race conditions with multi snapshots/protractor/browsers instances writing to the same `report.js` or reading from unfinished particular report json to produce `report.js`.
-- Refactor data structure of `report.js` (breaking change)
-   - Get rid of spec and expect duality (needs to be refactored the reporter plugin too)
-- 100% Test coverage
-- Convert to typescript based es6 npm plugin with a proper test infrastructure
-- Support Mocha framework
