@@ -1,4 +1,5 @@
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/protractor-screenshoter-plugin/Lobby)
+[![Open Source Helpers](https://www.codetriage.com/azachar/protractor-screenshoter-plugin/badges/users.svg)](https://www.codetriage.com/azachar/protractor-screenshoter-plugin)
 
 [![npm](https://img.shields.io/npm/dm/protractor-screenshoter-plugin.svg?style=flat-square)](https://www.npmjs.com/package/protractor-screenshoter-plugin) [![npm](https://img.shields.io/npm/dt/protractor-screenshoter-plugin.svg?style=flat-square)](https://www.npmjs.com/package/protractor-screenshoter-plugin)
 
@@ -8,7 +9,7 @@
 [![Known Vulnerabilities](https://snyk.io/package/npm/protractor-screenshoter-plugin/badge.svg)](https://snyk.io/package/npm/protractor-screenshoter-plugin)
 
 [![Build Status](https://travis-ci.org/azachar/protractor-screenshoter-plugin.svg?branch=master)](https://travis-ci.org/azachar/protractor-screenshoter-plugin)
-[![Coverage Status](https://img.shields.io/codecov/c/github/azachar/protractor-screenshoter-plugin.svg?style=flat-square)](http://codecov.io/github/azachar/protractor-screenshoter-plugin?branch=master)
+[![Coverage Status](https://img.shields.io/codecov/c/github/azachar/protractor-screenshoter-plugin.svg?style=flat-square)](http://codecov.io/github/azachar/protractor-screenshoter-plugin?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/azachar/protractor-screenshoter-plugin.svg)](https://greenkeeper.io/)
 
 
 # protractor-screenshoter-plugin

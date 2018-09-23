@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.3"></a>
+## [0.10.3](https://github.com/azachar/protractor-screenshoter-plugin/compare/v0.10.2...v0.10.3) (2018-09-23)
+
+
+### Bug Fixes
+
+* **package:** update klaw-sync to version 6.0.0 ([c88d0fd](https://github.com/azachar/protractor-screenshoter-plugin/commit/c88d0fd)), closes [#76](https://github.com/azachar/protractor-screenshoter-plugin/issues/76)
+* **package:** update lodash to version 4.7.11 ([35501e3](https://github.com/azachar/protractor-screenshoter-plugin/commit/35501e3))
+
+
+
+<a name="0.10.2"></a>
+## [0.10.2](https://github.com/azachar/protractor-screenshoter-plugin/compare/v0.10.1...v0.10.2) (2018-09-23)
+
+
+### Bug Fixes
+
+* **greenkeeper:** Update dependencies to enable Greenkeeper 🌴 ([#75](https://github.com/azachar/protractor-screenshoter-plugin/issues/75)) ([5222313](https://github.com/azachar/protractor-screenshoter-plugin/commit/5222313))
+
+
+
 <a name="0.10.1"></a>
 ## [0.10.1](https://github.com/azachar/protractor-screenshoter-plugin/compare/v0.10.0...v0.10.1) (2018-02-17)
 
