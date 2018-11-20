@@ -34,6 +34,7 @@ try { // optional dependency, ignore if not installed
  *      writeReportFreq: {String}      (Default - 'end', 'spec', 'asap'),
  *      screenshotPath: {String}                (Default - 'reports/screenshots')
  *      clearFoldersBeforeTest: {Boolean}       (Default - false),
+ *      addPrefixToTests: {Boolean}  (Default - false),
  *      failTestOnErrorLog: {
  *               failTestOnErrorLogLevel: {Number},  (Default - 900)
  *               excludeKeywords: {A JSON Array}
@@ -436,18 +437,30 @@ protractorUtil.registerJasmineReporter = function(context) {
       }
     },
     specStarted: function() {
-      protractorUtil.test = {
-        start: moment(),
-        specScreenshots: [],
-        specLogs: [],
-        specHtmls: [],
-        failedExpectations: [],
-        passedExpectations: []
-      };
-      protractorUtil.testResults.push(protractorUtil.test);
+        protractorUtil.test = {
+          start: moment(),
+          specScreenshots: [],
+          specLogs: [],
+          specHtmls: [],
+          failedExpectations: [],
+          passedExpectations: [],
+          prefix: ''
+        };
+        global.browser.getProcessedConfig().then(function(config) {
+          if(config.capabilities) {
+            protractorUtil.test.prefix = '[' + config.capabilities.name + '] ';
+          }
+          protractorUtil.testResults.push(protractorUtil.test);
+        });
     },
     specDone: function(result) {
       protractorUtil.takeOnSpecDone(result, context, protractorUtil.test); //exec async operation
+
+      //Add defined name to the test.description as a prefix
+      if(context.config.addPrefixToTests) {
+        result.description = protractorUtil.test.prefix + result.description;
+        result.fullName = protractorUtil.test.prefix + result.fullName;
+      }
 
       //calculate total fails, success and so on
       if (!protractorUtil.stat[result.status]) {
@@ -606,7 +619,8 @@ protractorUtil.prototype.setup = function() {
     },
     dump: null,
     htmlReport: true,
-    writeReportFreq: 'end'
+    writeReportFreq: 'end',
+    addPrefixToTests: false
   }
 
   this.ci = this.obtainCIVariables(process.env);
