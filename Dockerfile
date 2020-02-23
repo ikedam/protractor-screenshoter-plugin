@@ -1,4 +1,5 @@
-FROM node:6
+# Use the latest one as this is for CI purpose.
+FROM node:latest
 
 WORKDIR /app
 
